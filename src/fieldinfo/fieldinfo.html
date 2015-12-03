@@ -19,7 +19,9 @@
         ng-class="{any: field._any}"
         >
         {{ func(field) }}
-      </span><!--
+      </span>
+      <span class="field-func">{{ field._aggregate || (field._raw ? 'raw' : '' )}}</span>
+      <!--
       --><span class="field-name"
         ng-class="{hasfunc: func(field), any: field._any}"
         >{{ field.name | underscore2space }}</span>
